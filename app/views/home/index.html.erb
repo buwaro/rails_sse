@@ -1,0 +1,24 @@
+<%= form_for :message, url: send_message_path, remote: true, method: :post do |f| %>
+  <div>
+  <%= f.label :title %>
+  </div>
+  <div>
+  <%= f.text_field :title %>
+  </div>
+  <div>
+  <%= f.label :description %>
+  </div>
+  <div>
+  <%= f.text_area :description%>
+  </div>
+  <div>
+  <%= f.submit %>
+  </div>
+<% end %>
+
+<div id="messages">
+  <div id="message" style="margin: .5rem; padding: .5rem; border: solid; display: none">
+    title:<div id="title"></div>
+    message:<div id="description"></div>
+  </div>
+</div>
